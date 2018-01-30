@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BC34A"
+    tools:context="com.example.danish.budgetprogress.MainActivity">
+
+    <ProgressBar xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/eenter"
+        android:layout_marginTop="43dp"
+        android:progressDrawable="@drawable/gradient"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="221dp"
+        tools:progress="0" />
+
+    <EditText
+        android:id="@+id/et_bud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:background="@drawable/round"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:hint="Enter Budget for item"
+        android:textColor="#FFF"
+        android:textColorHint="#d3d3d3"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <EditText
+        android:id="@+id/et_exp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/eenter"
+        android:layout_alignBottom="@+id/eenter"
+
+        android:background="@drawable/round"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:hint="Enter amount saved"
+        android:textColorHint="#d3d3d3"
+        android:textColor="#FFF"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <Button
+        android:id="@+id/benter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/eenter"
+        android:layout_alignStart="@+id/eenter"
+        android:layout_alignTop="@+id/et_bud"
+        android:background="@drawable/round"
+        android:text="enter"
+        android:textColor="#FFF"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <Button
+        android:id="@+id/eenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/progress"
+        android:layout_alignRight="@+id/progress"
+        android:layout_below="@+id/benter"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/round"
+        android:text="enter"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:id="@+id/per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="0%"
+
+        android:textColor="#FFF" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginBottom="37dp"
+        android:text="Budget"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/left"
+        android:layout_alignStart="@+id/left"
+        android:text="0"
+        android:textColor="#FFF"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="296dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reset"
+        android:layout_alignLeft="@+id/et_exp"
+        android:layout_alignStart="@+id/et_exp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:text="Remaining"
+        android:textColor="#FFF"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="352dp" />
+
+    <TextView
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_toEndOf="@+id/et_exp"
+        android:layout_toRightOf="@+id/et_exp"
+        android:text="0"
+        android:textColor="#FFF" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/eenter"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/eenter"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round"
+        android:text="Reset"
+        android:textColor="#FFF" />
+
+</RelativeLayout>
